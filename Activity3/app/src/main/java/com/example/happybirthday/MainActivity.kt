@@ -76,17 +76,19 @@ fun BirthdayGreetingWithImage(message: String, from: String) {
                 .fillMaxHeight()
                 .fillMaxWidth(),
             contentScale = ContentScale.Crop
+
         )
         BirthdayGreetingWithText(message = message, from = from)
     }
 }
+
+
 
 @Preview(showBackground = false)
 @Composable
 private fun BirthdayCardPreview() {
     HappyBirthdayTheme {
         BirthdayGreetingWithImage(message = stringResource(R.string.happy_birthday_text), from = stringResource(
-                    R.string.signature_text)
-                )
+                    R.string.signature_text))
     }
 }
